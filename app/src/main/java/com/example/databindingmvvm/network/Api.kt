@@ -1,5 +1,6 @@
-package com.example.databindingmvvm
+package com.example.databindingmvvm.network
 
+import com.example.databindingmvvm.data.PostData
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import retrofit2.Response
@@ -13,7 +14,7 @@ interface Api {
     suspend fun getMovies():Response<PostData>
 
     companion object{
-        operator fun invoke():Api{
+        operator fun invoke(): Api {
 
              return Retrofit.Builder()
                  .addConverterFactory(GsonConverterFactory.create(gson))

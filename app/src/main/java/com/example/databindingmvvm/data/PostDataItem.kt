@@ -1,4 +1,4 @@
-package com.example.databindingmvvm
+package com.example.databindingmvvm.data
 
 data class PostDataItem(
     val body: String,

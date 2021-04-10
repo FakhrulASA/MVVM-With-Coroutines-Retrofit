@@ -1,4 +1,4 @@
-package com.example.databindingmvvm
+package com.example.databindingmvvm.data
 
 data class MoviesData(
     val userId:Int,

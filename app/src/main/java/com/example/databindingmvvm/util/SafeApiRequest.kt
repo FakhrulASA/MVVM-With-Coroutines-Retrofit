@@ -1,8 +1,7 @@
-package com.example.databindingmvvm
+package com.example.databindingmvvm.util
 
 import retrofit2.Response
 import java.io.IOException
-import java.lang.invoke.CallSite
 
 abstract class SafeApiRequest {
     suspend fun <T> apiRequest(call:suspend ()->Response<T>):T{
@@ -12,7 +11,9 @@ abstract class SafeApiRequest {
             return response.body()!!
         }
         else{
-            throw APIException(response.code().toString())
+            throw APIException(
+                response.code().toString()
+            )
 
         }
     }
